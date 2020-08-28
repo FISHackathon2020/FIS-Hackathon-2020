@@ -8,3 +8,7 @@ through internships, co-ops, and other opportunities. In the resources listed be
 you'll find a sample dataset to use in testing your solution.
 
 We are planning on using algorithms to try and analyze student resumes and student information to best represent their interests. Our solution ideation is still a work in progress as of now
+
+
+Update: thoughts of doing a dating app for jobs, where users (college students) upload their resumes and their interests/experiences, and are matched to jobs/companies that would be interested in them.
+
