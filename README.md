@@ -1,1 +1,10 @@
 # FIS-Hackathon-2020
+
+Problem: The nature of student engagement has changed. As company that values the talent and
+ideas that college students bring, we want to ensure that we're engaging with students
+on their terms. The goal of this challenge is to create a tool that will allow us to collect
+valuable information about a student's experiences and interests in order to partner
+through internships, co-ops, and other opportunities. In the resources listed below,
+you'll find a sample dataset to use in testing your solution.
+
+We are planning on using algorithms to try and analyze student resumes and student information to best represent their interests. Our solution ideation is still a work in progress as of now
