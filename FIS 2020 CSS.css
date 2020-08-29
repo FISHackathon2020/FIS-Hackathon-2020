@@ -1,0 +1,217 @@
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 62.5%;
+}
+body {
+  background: GainsBoro;
+  overflow: hidden;
+}
+
+.positionName {
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+}
+.positionDetails {
+  padding: 10px;
+  font-weight: normal;
+  font-size: 13px;
+  height: 11.5rem
+  background: white;
+}
+
+#instructions {
+  text-align: center;
+  font-size: 15px;
+}
+
+$w: 30.6rem;
+$h: 54rem;
+$headerH: 6rem;
+$positionW: 24rem;
+$positionH: 32rem;
+$positionTopH: 20.5rem;
+$positionBtmH: 11.5rem;
+$imgSize: 10rem;
+
+$orange: #FF945A;
+$green: #B1DA96;
+
+.match {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: $w;
+  height: $h;
+  margin-left: $w/-2;
+  margin-top: $h/-2;
+  background: #F6F6F5;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+  
+  &__header {
+    height: $headerH;
+    background: #002942;
+  }
+  
+  &__content {
+    overflow: hidden;
+    position: relative;
+    height: $h - $headerH;
+    padding-top: 4.5rem;
+    user-select: none;
+  }
+  
+  &__position-cont {
+    position: relative;
+    width: $positionW;
+    height: $positionH;
+    margin: 0 auto 5rem;
+  }
+  
+  &__position {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: 50% 100%;
+    
+    &.reset {
+      transition: transform 0.3s;
+      transform: translateX(0) !important;
+      
+      .match__position__choice {
+        transition: opacity 0.3s;
+        opacity: 0 !important;;
+      }
+    }
+    
+    &.inactive {
+      transition: transform 0.3s;
+    }
+    
+    &.to-left {
+      transform: translateX(-30rem) rotate(-30deg) !important;
+    }
+    
+    &.to-right {
+      transform: translate(30rem) rotate(30deg) !important;
+    }
+    
+    &.below {
+      z-index: 1;
+    }
+    
+    &__top {
+      height: $positionTopH;
+      padding-top: 4rem;
+      
+      &.silver {
+        background: Silver;
+      }
+      &.blue {
+        background: PowderBlue;
+      }
+      &.lightSeaGreen {
+        background: LightSeaGreen;
+      }
+      &.cadetBlue {
+        background: CadetBlue;
+      }
+      &.skyBlue {
+        background: SkyBlue;
+      }
+      &.teal {
+        background: Teal;
+      }
+    }
+    
+    &__img {
+      overflow: hidden;
+      width: $imgSize;
+      height: $imgSize;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      border: 0.5rem solid #ffffff;
+      background-image: url('https://www.fintechfutures.com/files/2016/05/FIS.jpeg');
+      background-size: cover;
+    }
+    
+    &__we {
+      text-align: center;
+      font-size: 2.2rem;
+      line-height: 11.5rem;
+    }
+    
+    &__choice {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 2rem;
+        height: 2rem;
+        margin-left: -1rem;
+        color: #fff;
+        border-radius: 50%;
+        box-shadow: -2rem -3rem #fff, 2rem -3rem #fff;
+      }
+      
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 4rem;
+        height: 1.5rem;
+        margin-left: -2rem;
+        border: 0.6rem solid #fff;
+        border-bottom: none;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+      }
+      
+      &.m--reject {
+        background: DarkSalmon;
+      }
+      &.m--like {
+        background: DarkSeaGreen;
+        
+        &:after {
+          transform: scaleY(-1);
+        }
+      }
+    }
+    
+    &__drag {
+      z-index: 5;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      cursor: grab;
+    }
+  }
+  
+  &__tip {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+}
